@@ -1,2 +1,3 @@
 # advent-of-code
-AOC in BigQuery SQL
+Advent of Code!
+
