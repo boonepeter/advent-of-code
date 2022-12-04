@@ -32,16 +32,16 @@ elf_ids AS (
     o,
     CAST(IF(raw_row = '', '0', raw_row) AS INT) AS calories
   FROM raw_rows
--- )
--- Part 1
--- SELECT
---   SUM(calories),
---   elf_id
--- FROM
---   elf_ids
--- GROUP BY elf_id
--- ORDER BY SUM(calories) DESC
--- LIMIT 1;
+),
+part_1 AS (
+  SELECT
+    SUM(calories),
+    elf_id
+  FROM
+    elf_ids
+  GROUP BY elf_id
+  ORDER BY SUM(calories) DESC
+  LIMIT 1
 ),
 top_elves AS (
 SELECT
